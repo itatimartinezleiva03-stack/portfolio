@@ -94,6 +94,7 @@
       background: radial-gradient(circle, var(--terra-pale) 0%, transparent 70%);
       pointer-events: none;
     }
+    @media (max-width: 768px) { .hero::before { display: none; } }
     .hero-tag {
       display: inline-block;
       background: var(--terra-pale);
@@ -355,12 +356,25 @@
       border-radius: var(--radius);
       border-left: 3px solid var(--terra);
     }
-    .service-notes p {
+    .notes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .notes-list li {
       font-size: 0.85rem;
       color: var(--brown-mid);
-      margin-bottom: 0.4rem;
+      padding-left: 1.1rem;
+      position: relative;
     }
-    .service-notes p:last-child { margin-bottom: 0; }
+    .notes-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--terra);
+      font-weight: 700;
+    }
 
     /* ── Metodología ── */
     #metodologia { background: var(--white); }
@@ -557,8 +571,7 @@
     <h1>Itatí Martínez Leiva</h1>
     <p class="hero-sub">Especialista en estrategia y automatización por email</p>
     <p class="hero-desc">
-      Licenciada en Relaciones Públicas e Institucionales. Certificada en Project Management por Google.
-      Experiencia gestionando cuentas, diseñando flujos automatizados y construyendo estrategias de email para marcas de distintos rubros.
+      Licenciada en Relaciones Públicas e Institucionales. Más de 3 años de experiencia en Email Marketing acompañando marcas en estrategia, automatización y fidelización. Inglés profesional.
     </p>
     <div class="hero-ctas">
       <a href="#contacto" class="btn-primary">Hablemos</a>
@@ -571,16 +584,17 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-image-placeholder">
-          <span>Tu foto<br />aquí</span>
+          <img src="foto.jpg" alt="Itatí Martínez Leiva" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <span style="display:none;align-items:center;justify-content:center;width:100%;height:100%;color:var(--terra);font-size:1.1rem;text-align:center;">Tu foto<br/>aquí</span>
         </div>
         <div class="about-text">
           <p class="section-label">Sobre mí</p>
           <h2 class="section-title">Estrategia antes de cualquier envío</h2>
           <div class="section-divider"></div>
           <p>
-            Cuento con experiencia gestionando cuentas estratégicas en plataformas líderes de Email Marketing,
-            diseñando flujos de comunicación y liderando proyectos orientados a la retención
-            y fidelización de clientes.
+            Con más de 3 años de experiencia en Email Marketing, acompañé a clientes en todo su proceso:
+            onboarding, asesorías estratégicas, diseño de flujos y lectura de métricas.
+            Trabajo orientada a la retención y fidelización, con mirada comunicacional y foco en resultados.
           </p>
           <p>
             Combino criterio estratégico en comunicación de marca con capacidad de ejecución técnica en
@@ -594,10 +608,10 @@
           <div class="about-chips">
             <span class="chip">Email Marketing</span>
             <span class="chip">Automatización</span>
-            <span class="chip">Estrategia de Contenidos</span>
-            <span class="chip">Segmentación</span>
+            <span class="chip">Fidelización de clientes</span>
+            <span class="chip">Onboarding</span>
             <span class="chip">Relaciones Públicas</span>
-            <span class="chip">Project Management</span>
+            <span class="chip">Inglés profesional</span>
           </div>
         </div>
       </div>
@@ -608,16 +622,16 @@
   <section id="servicios">
     <div class="section-inner">
       <p class="section-label">Servicios</p>
-      <h2 class="section-title">¿Con quién estoy trabajando?</h2>
+      <h2 class="section-title">Servicios a medida</h2>
       <div class="section-divider"></div>
 
       <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('agencias', this)">Para agencias</button>
-        <button class="tab-btn" onclick="switchTab('particulares', this)">Para negocios</button>
+        <button class="tab-btn active" onclick="switchTab('particulares', this)">Para negocios</button>
+        <button class="tab-btn" onclick="switchTab('agencias', this)">Para agencias</button>
       </div>
 
       <!-- AGENCIAS -->
-      <div id="tab-agencias" class="tab-content active">
+      <div id="tab-agencias" class="tab-content">
         <p class="tab-intro">
           Puedo operar como tu especialista de Email Marketing para los clientes que lo necesiten,
           de manera coordinada y bajo los lineamientos de tu agencia. Me integro al flujo de trabajo
@@ -656,14 +670,16 @@
           </p>
         </div>
         <div class="service-notes">
-          <p>La definición de plantillas incluye estructura, copys y criterios de diseño. Su desarrollo visual o en HTML queda a cargo del equipo de la agencia.</p>
-          <p>El plan de la plataforma de envíos no está incluido y debe ser abonado directamente por la agencia o el cliente.</p>
-          <p>Las tarifas se definen a convenir según el volumen, la complejidad y las características de cada cliente.</p>
+          <ul class="notes-list">
+            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Su desarrollo visual o en HTML queda a cargo del equipo de la agencia.</li>
+            <li>El plan de la plataforma de envíos no está incluido y debe ser abonado directamente por la agencia o el cliente.</li>
+            <li>Las tarifas se definen a convenir según el volumen, la complejidad y las características de cada cliente.</li>
+          </ul>
         </div>
       </div>
 
       <!-- PARTICULARES -->
-      <div id="tab-particulares" class="tab-content">
+      <div id="tab-particulares" class="tab-content active">
         <p class="tab-intro">
           No necesitás contratar un equipo ni trabajar con una agencia grande para tener una comunicación
           profesional y consistente con tus clientes. Si tenés una base sin trabajar, clientes que no
@@ -703,9 +719,11 @@
           </p>
         </div>
         <div class="service-notes">
-          <p>La definición de plantillas incluye estructura, copys y criterios de diseño. Para el armado visual o desarrollo en HTML, trabajamos en conjunto con un diseñador o desarrollador.</p>
-          <p>El plan de la plataforma de envíos no está incluido y queda a cargo del cliente.</p>
-          <p>Los precios corresponden a una etapa de lanzamiento y están sujetos a revisión según el volumen y las necesidades de cada proyecto.</p>
+          <ul class="notes-list">
+            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Para el armado visual o desarrollo en HTML, trabajamos en conjunto con un diseñador o desarrollador.</li>
+            <li>El plan de la plataforma de envíos no está incluido y queda a cargo del cliente.</li>
+            <li>Las tarifas se definen a convenir según el volumen y las necesidades de cada proyecto.</li>
+          </ul>
         </div>
       </div>
 
@@ -825,7 +843,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Itatí Martínez Leiva · Email Marketing &amp; Comunicación Estratégica</p>
+    <p>© 2026 Itatí Martínez Leiva · Email Marketing &amp; Comunicación Estratégica</p>
   </footer>
 
   <script>
