@@ -222,6 +222,7 @@
       flex-wrap: wrap;
       gap: 0.6rem;
       margin-top: 1.8rem;
+      justify-content: center;
     }
     .chip {
       background: var(--terra-pale);
@@ -350,11 +351,21 @@
       font-weight: 300;
     }
     .service-notes {
-      margin-top: 1.6rem;
+      margin-top: 2.6rem;
       padding: 1.2rem 1.6rem;
       background: var(--beige-dark);
       border-radius: var(--radius);
       border-left: 3px solid var(--terra);
+    }
+    .service-notes::before {
+      content: 'Aclaraciones';
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 0.75rem;
     }
     .notes-list {
       list-style: none;
