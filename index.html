@@ -423,6 +423,30 @@
       font-weight: 300;
     }
 
+    /* ── Variación visual de cards ── */
+    /* Pasos metodología: crema → blanco → terracota suave */
+    .method-steps .method-step:nth-child(2) {
+      background: var(--white);
+    }
+    .method-steps .method-step:nth-child(3) {
+      background: var(--terra-pale);
+    }
+    .method-steps .method-step:nth-child(3) .step-num {
+      color: rgba(184,102,74,0.3);
+    }
+    /* Proyectos: alternado blanco / crema */
+    .cases-grid .case-card:nth-child(even) {
+      background: var(--cream);
+    }
+    /* Servicios: 01 blanco, 02 crema */
+    .services-grid .service-card:nth-child(2) {
+      background: var(--cream);
+      border-top-color: var(--brown-mid);
+    }
+    .services-grid .service-card:nth-child(2) .service-number {
+      color: rgba(107,64,53,0.25);
+    }
+
     /* ── Política ── */
     #politica { background: var(--beige); padding: 60px 2rem; }
     .politica-inner {

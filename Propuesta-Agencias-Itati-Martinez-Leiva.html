@@ -397,6 +397,24 @@
       color: var(--brown-light);
     }
 
+    /* ── Variación visual de cards ── */
+    .method-grid .method-step:nth-child(2) {
+      background: var(--white);
+    }
+    .method-grid .method-step:nth-child(3) {
+      background: var(--terra-pale);
+    }
+    .method-grid .method-step:nth-child(3) .step-num {
+      color: rgba(184,102,74,0.3);
+    }
+    .service-grid .service-card:nth-child(2) {
+      background: var(--beige);
+      border-top-color: var(--brown-mid);
+    }
+    .service-grid .service-card:nth-child(2) .service-num {
+      color: rgba(107,64,53,0.25);
+    }
+
     /* ── Print ── */
     @media print {
       body { background: white; font-size: 13px; }
@@ -405,6 +423,24 @@
       .doc-header { padding: 2rem 2.4rem 1.8rem; }
       .doc-body { padding: 2rem 2.4rem; }
       @page { size: A4; margin: 0; }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .page { margin: 0; }
+      .print-bar { padding: 0.7rem 1.2rem; }
+      .doc-header { padding: 1.4rem 1.4rem 1.2rem; }
+      .doc-body { padding: 1.4rem; }
+      .header-meta { gap: 1rem; }
+      .service-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .doc-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        padding: 1rem 1.4rem;
+      }
     }
   </style>
 </head>
