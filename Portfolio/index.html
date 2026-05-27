@@ -376,14 +376,19 @@
       font-weight: 700;
     }
 
-    /* ── Metodología ── */
-    #metodologia { background: var(--white); }
-    .method-intro {
-      max-width: 560px;
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: var(--brown-mid);
-      margin-bottom: 3rem;
+    /* ── Metodología (dentro de tabs) ── */
+    .tab-method {
+      margin-top: 2.8rem;
+      border-top: 1px solid var(--beige-dark);
+      padding-top: 2rem;
+    }
+    .tab-method-title {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 1.4rem;
     }
     .method-steps {
       display: grid;
@@ -637,7 +642,6 @@
       <ul class="nav-links">
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#metodologia">Metodología</a></li>
         <li><a href="#casos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -742,10 +746,30 @@
         </div>
         <div class="service-notes">
           <ul class="notes-list">
-            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Su desarrollo visual o en HTML queda a cargo del equipo de la agencia.</li>
+            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Su desarrollo visual o en HTML queda a cargo del equipo de diseño de la agencia.</li>
             <li>El plan de la plataforma de envíos no está incluido y debe ser abonado directamente por la agencia o el cliente.</li>
             <li>Las tarifas se definen a convenir según el volumen, la complejidad y las características de cada cliente.</li>
           </ul>
+        </div>
+        <div class="tab-method">
+          <p class="tab-method-title">¿Cómo trabajamos?</p>
+          <div class="method-steps">
+            <div class="method-step">
+              <div class="step-num">1</div>
+              <h3>Me presentás el cliente</h3>
+              <p>Compartís el contexto: industria, base de contactos y objetivos. Definimos juntos el alcance y si tiene sentido avanzar con ese proyecto.</p>
+            </div>
+            <div class="method-step">
+              <div class="step-num">2</div>
+              <h3>Diseño el plan</h3>
+              <p>Armo la estrategia y te la presento para alinear con tu agencia. Acordamos el esquema de trabajo y la tarifa para ese cliente.</p>
+            </div>
+            <div class="method-step">
+              <div class="step-num">3</div>
+              <h3>Ejecuto en segundo plano</h3>
+              <p>Opero coordinada con tu equipo. Vos mantenés la relación con el cliente; yo aporto la estrategia, las campañas y los reportes.</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -788,42 +812,33 @@
         </div>
         <div class="service-notes">
           <ul class="notes-list">
-            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Para el armado visual o desarrollo en HTML, trabajamos en conjunto con un diseñador o desarrollador.</li>
+            <li>La definición de plantillas incluye estructura, copys y criterios de diseño. Para el armado visual o desarrollo en HTML, podemos coordinarlo con el diseñador o desarrollador que ya trabajés.</li>
             <li>El plan de la plataforma de envíos no está incluido y queda a cargo del cliente.</li>
             <li>Las tarifas se definen a convenir según el volumen y las necesidades de cada proyecto.</li>
           </ul>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Metodología -->
-  <section id="metodologia">
-    <div class="section-inner">
-      <p class="section-label">Metodología</p>
-      <h2 class="section-title">¿Cómo trabajamos?</h2>
-      <div class="section-divider"></div>
-      <p class="method-intro">
-        Un proceso claro de inicio a fin para que sepas exactamente en qué etapa estamos y qué esperar.
-      </p>
-      <div class="method-steps">
-        <div class="method-step">
-          <div class="step-num">1</div>
-          <h3>Nos conocemos</h3>
-          <p>Me interesa conocer tus necesidades y objetivos para ayudarte a crear una estrategia que se ajuste a eso. Compartís el contexto: industria, base de contactos y metas.</p>
-        </div>
-        <div class="method-step">
-          <div class="step-num">2</div>
-          <h3>Diseñamos el plan</h3>
-          <p>Analizamos lo que tenés, diseñamos la estrategia y dejamos todo configurado para empezar. Te presento el esquema y acordamos la tarifa según el caso.</p>
-        </div>
-        <div class="method-step">
-          <div class="step-num">3</div>
-          <h3>Ejecutamos y medimos</h3>
-          <p>Ejecutamos, medimos y ajustamos. Vos te enfocás en tu negocio. Te mantengo informada en cada etapa con reportes y métricas claras.</p>
+        <div class="tab-method">
+          <p class="tab-method-title">¿Cómo trabajamos?</p>
+          <div class="method-steps">
+            <div class="method-step">
+              <div class="step-num">1</div>
+              <h3>Nos conocemos</h3>
+              <p>Me interesa conocer tus necesidades y objetivos para ayudarte a crear una estrategia que se ajuste a eso. Compartís el contexto: industria, base de contactos y metas.</p>
+            </div>
+            <div class="method-step">
+              <div class="step-num">2</div>
+              <h3>Diseñamos el plan</h3>
+              <p>Analizamos lo que tenés, diseñamos la estrategia y dejamos todo configurado para empezar. Te presento el esquema y acordamos la tarifa según el caso.</p>
+            </div>
+            <div class="method-step">
+              <div class="step-num">3</div>
+              <h3>Ejecutamos y medimos</h3>
+              <p>Ejecutamos, medimos y ajustamos. Vos te enfocás en tu negocio. Te mantengo informada en cada etapa con reportes y métricas claras.</p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -831,9 +846,8 @@
   <section id="casos">
     <div class="section-inner">
       <p class="section-label">Proyectos</p>
-      <h2 class="section-title">Resultados reales</h2>
+      <h2 class="section-title">Proyectos</h2>
       <div class="section-divider"></div>
-      <p class="cases-intro">Resultados reales de proyectos reales. Los nombres de los clientes se mantienen en reserva por acuerdo de confidencialidad.</p>
       <div class="cases-grid">
 
         <div class="case-card">
