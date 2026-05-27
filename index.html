@@ -536,6 +536,83 @@
     }
 
     /* ── Responsive ── */
+    /* ── Proyectos ── */
+    #casos { background: var(--beige); }
+    .cases-intro {
+      max-width: 640px;
+      font-size: 0.92rem;
+      color: var(--brown-light);
+      font-style: italic;
+      margin-bottom: 2.8rem;
+    }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+    .case-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--terra);
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .case-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .case-industry {
+      display: inline-block;
+      background: var(--terra-pale);
+      color: var(--terra);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+    .case-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--brown-dark);
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+    .case-card .case-subtitle {
+      font-size: 0.83rem;
+      color: var(--brown-light);
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+    }
+    .case-results {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .case-results li {
+      font-size: 0.88rem;
+      color: var(--brown-mid);
+      font-weight: 300;
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.55;
+    }
+    .case-results li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--terra);
+      font-size: 0.8rem;
+    }
+    .case-metric {
+      color: var(--terra);
+      font-weight: 600;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 0 1.2rem; }
       .nav-links { display: none; }
@@ -544,6 +621,7 @@
       .about-image-placeholder { aspect-ratio: 3/2; }
       .services-grid { grid-template-columns: 1fr; }
       .method-steps { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 2.4rem; }
       .politica-inner { flex-direction: column; }
       .hero { padding: 72px 1.4rem 64px; }
@@ -560,6 +638,7 @@
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#casos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -569,9 +648,9 @@
   <section class="hero" id="inicio">
     <div class="hero-tag">Email Marketing · Comunicación Estratégica</div>
     <h1>Itatí Martínez Leiva</h1>
-    <p class="hero-sub">Especialista en estrategia y automatización por email</p>
+    <p class="hero-sub">Estrategia y automatización de email que convierte contactos en clientes</p>
     <p class="hero-desc">
-      Licenciada en Relaciones Públicas e Institucionales. Más de 3 años de experiencia en Email Marketing acompañando marcas en estrategia, automatización y fidelización. Inglés profesional.
+      Más de 3 años trabajando con marcas de distintas industrias en estrategia, automatización y fidelización por email. Licenciada en Relaciones Públicas con formación en gestión de proyectos.
     </p>
     <div class="hero-ctas">
       <a href="#contacto" class="btn-primary">Hablemos</a>
@@ -584,26 +663,21 @@
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-image-placeholder">
-          <img src="foto.jpg" alt="Itatí Martínez Leiva" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <img src="foto.jpg" alt="Itatí Martínez Leiva" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:var(--radius);display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
           <span style="display:none;align-items:center;justify-content:center;width:100%;height:100%;color:var(--terra);font-size:1.1rem;text-align:center;">Tu foto<br/>aquí</span>
         </div>
         <div class="about-text">
           <p class="section-label">Sobre mí</p>
-          <h2 class="section-title">Estrategia antes de cualquier envío</h2>
+          <h2 class="section-title">Comunicación que llega porque fue pensada</h2>
           <div class="section-divider"></div>
           <p>
-            Con más de 3 años de experiencia en Email Marketing, acompañé a clientes en todo su proceso:
-            onboarding, asesorías estratégicas, diseño de flujos y lectura de métricas.
-            Trabajo orientada a la retención y fidelización, con mirada comunicacional y foco en resultados.
+            Desde hace más de 3 años vengo acompañando carteras de clientes de distintas industrias en todo su proceso de email marketing: desde el diagnóstico inicial hasta la lectura de métricas, pasando por el diseño de flujos, la segmentación y la gestión de campañas. Ese recorrido me dio una visión muy clara de qué funciona, qué no, y por qué.
           </p>
           <p>
-            Combino criterio estratégico en comunicación de marca con capacidad de ejecución técnica en
-            herramientas de automatización. Entiendo cada mensaje como parte de la identidad de una marca:
-            cada mail que le llega a tus contactos construye —o debilita— la percepción que tienen de vos.
+            Entiendo cada mensaje como parte de la identidad de una marca: cada mail que llega a la bandeja de entrada de tus contactos construye —o debilita— la percepción que tienen de vos. Por eso trabajo con criterio estratégico en comunicación y con capacidad técnica en automatización, sin perder de vista el resultado final.
           </p>
           <p>
-            Mi formación en gestión de proyectos me permite trabajar con metodología estructurada,
-            respetar procesos y anticipar cada etapa del trabajo.
+            Mi formación en Relaciones Públicas e Institucionales y en gestión de proyectos me permite trabajar de forma estructurada, anticipar cada etapa y mantener el proceso ordenado de principio a fin.
           </p>
           <div class="about-chips">
             <span class="chip">Email Marketing</span>
@@ -611,7 +685,6 @@
             <span class="chip">Fidelización de clientes</span>
             <span class="chip">Onboarding</span>
             <span class="chip">Relaciones Públicas</span>
-            <span class="chip">Inglés profesional</span>
           </div>
         </div>
       </div>
@@ -633,9 +706,7 @@
       <!-- AGENCIAS -->
       <div id="tab-agencias" class="tab-content">
         <p class="tab-intro">
-          Puedo operar como tu especialista de Email Marketing para los clientes que lo necesiten,
-          de manera coordinada y bajo los lineamientos de tu agencia. Me integro al flujo de trabajo
-          existente, aportando tanto en la estrategia como en la relación con el cliente.
+          Si tenés clientes que necesitan email marketing y no lo estás cubriendo, puedo ser tu especialista externa. Trabajo de forma coordinada, bajo los lineamientos de tu agencia y sin interferir en la relación que ya construiste con tu cliente. Me integro a tu flujo de trabajo aportando tanto en estrategia como en ejecución.
         </p>
         <div class="services-grid">
           <div class="service-card">
@@ -681,10 +752,7 @@
       <!-- PARTICULARES -->
       <div id="tab-particulares" class="tab-content active">
         <p class="tab-intro">
-          No necesitás contratar un equipo ni trabajar con una agencia grande para tener una comunicación
-          profesional y consistente con tus clientes. Si tenés una base sin trabajar, clientes que no
-          volvieron, o querés aparecer de manera regular en la bandeja de entrada de tu audiencia, esto
-          es para vos.
+          Tener una estrategia de email profesional no requiere un equipo interno ni una agencia grande. Si tenés una base de contactos que no estás aprovechando, clientes que compraron una vez y no volvieron, o simplemente querés aparecer con regularidad en la bandeja de entrada de tu audiencia — esto es lo que necesitás.
         </p>
         <div class="services-grid">
           <div class="service-card">
@@ -742,19 +810,77 @@
       <div class="method-steps">
         <div class="method-step">
           <div class="step-num">1</div>
-          <h3>Primera conversación</h3>
+          <h3>Nos conocemos</h3>
           <p>Me interesa conocer tus necesidades y objetivos para ayudarte a crear una estrategia que se ajuste a eso. Compartís el contexto: industria, base de contactos y metas.</p>
         </div>
         <div class="method-step">
           <div class="step-num">2</div>
-          <h3>Setup y estrategia</h3>
+          <h3>Diseñamos el plan</h3>
           <p>Analizamos lo que tenés, diseñamos la estrategia y dejamos todo configurado para empezar. Te presento el esquema y acordamos la tarifa según el caso.</p>
         </div>
         <div class="method-step">
           <div class="step-num">3</div>
-          <h3>Gestión continua</h3>
-          <p>Ejecutamos, medimos y ajustamos. Vos te enfocás en tu negocio. Te mantengo informado en cada etapa con reportes y métricas claras.</p>
+          <h3>Ejecutamos y medimos</h3>
+          <p>Ejecutamos, medimos y ajustamos. Vos te enfocás en tu negocio. Te mantengo informada en cada etapa con reportes y métricas claras.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="casos">
+    <div class="section-inner">
+      <p class="section-label">Proyectos</p>
+      <h2 class="section-title">Resultados reales</h2>
+      <div class="section-divider"></div>
+      <p class="cases-intro">Resultados reales de proyectos reales. Los nombres de los clientes se mantienen en reserva por acuerdo de confidencialidad.</p>
+      <div class="cases-grid">
+
+        <div class="case-card">
+          <span class="case-industry">Turismo</span>
+          <h3>Automatización orientada a recompra y conversión</h3>
+          <p class="case-subtitle">Empresa de asistencia al viajero · Venta online con integración por API</p>
+          <ul class="case-results">
+            <li>Flujo de renovación pre-vencimiento: tasa de apertura <strong class="case-metric">52%</strong> — más del doble del promedio de la industria (25%).</li>
+            <li>Recuperación de carritos abandonados: apertura <strong class="case-metric">39,8%</strong> con CTOR de <strong class="case-metric">9,6%</strong> — por encima del promedio del sector (6,8%).</li>
+            <li>Email de agradecimiento post-compra personalizado: tasa de apertura <strong class="case-metric">57%</strong>.</li>
+            <li>El canal de email se consolidó como fuente directa de ventas recurrentes en fechas de alta conversión.</li>
+          </ul>
+        </div>
+
+        <div class="case-card">
+          <span class="case-industry">Educación</span>
+          <h3>Estrategia multicanal: Email Marketing + WhatsApp automatizado</h3>
+          <p class="case-subtitle">Institución educativa de gran escala · Múltiples niveles y áreas</p>
+          <ul class="case-results">
+            <li>Newsletter institucional: tasa de apertura de <strong class="case-metric">57%</strong> — más del doble del benchmark educativo (25–30%).</li>
+            <li>Flujo de bienvenida para nuevos leads captados por formulario: apertura <strong class="case-metric">50%</strong>.</li>
+            <li>Flujos conversacionales en WhatsApp por área con preatención automatizada 24/7.</li>
+          </ul>
+        </div>
+
+        <div class="case-card">
+          <span class="case-industry">E-commerce</span>
+          <h3>Captación, segmentación y fidelización desde cero</h3>
+          <p class="case-subtitle">Tienda de indumentaria · Integración con Shopify</p>
+          <ul class="case-results">
+            <li>Construcción completa de la infraestructura de email marketing desde cero: análisis, segmentación y flujos.</li>
+            <li>Integración con Shopify para activar automatizaciones basadas en comportamiento de compra.</li>
+            <li>Plan de captación de nuevos contactos y fidelización para incentivar la recompra.</li>
+          </ul>
+        </div>
+
+        <div class="case-card">
+          <span class="case-industry">E-commerce</span>
+          <h3>Campaña integral para Cyber Monday</h3>
+          <p class="case-subtitle">Empresa de indumentaria · Campaña de fecha especial</p>
+          <ul class="case-results">
+            <li>Diseño e implementación de estrategia completa para Cyber Monday: campañas segmentadas + flujos automatizados.</li>
+            <li>Segmentación por comportamiento previo para maximizar conversiones durante el período de alta demanda.</li>
+            <li>Coordinación entre automatizaciones y campañas manuales con timing de envíos optimizado.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -786,10 +912,7 @@
           <h2 class="section-title">¡Hablemos!</h2>
           <div class="section-divider"></div>
           <p class="contact-lead">
-            Me interesa conocer tu proyecto y tus objetivos para pensar juntos cómo construir
-            una estrategia que tenga sentido para vos. Si tenés clientes que pidieron Email Marketing
-            y no lo estás cubriendo, o simplemente querés sumar el servicio sin incorporar un recurso
-            fijo, podemos explorar cómo trabajar juntos.
+            Si llegaste hasta acá, probablemente tenés una base de contactos que podría estar trabajando más — o querés empezar a comunicarte mejor con tu audiencia. Cualquiera sea el punto de partida, me interesa escucharte.
           </p>
           <div class="contact-items">
             <a href="mailto:itatimartinezleiva03@gmail.com" class="contact-item">
